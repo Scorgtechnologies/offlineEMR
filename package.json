@@ -1,0 +1,51 @@
+{
+  "name": "rescribe",
+  "productName": "rescribe",
+  "version": "1.0.0",
+  "description": "Health Care Application",
+  "license": "SCORG",
+  "author": {
+    "name": "Scorg Techonologies",
+    "email": "sagar.jadhav@scorgtechnologies.com",
+    "url": "http://rescribe.in/"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "publish": "build",
+    "release-build-win": "build -p always",
+    "release-build-mac": "build --mac -p always"
+  },
+  "devDependencies": {
+    "electron": "1.8.3",
+    "electron-builder": "^20.8.2"
+  },
+  "dependencies": {
+    "async": "2.6.0",
+    "electron-isDev": "^0.1.0",
+    "electron-log": "^2.2.14",
+    "electron-online": "^1.0.0",
+    "electron-pdf-window": "^1.0.12",
+    "electron-updater": "^4.0.0",
+    "getmac": "^1.4.1",
+    "load-json-file": "4.0.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.0",
+    "request": "^2.87.0",
+    "user-home": "^2.0.0",
+    "write-json-file": "2.3.0"
+  },
+  "build": {
+    "appId": "com.github.scorg.offlineEmr",
+    "mac": {
+      "icon": "./assets/icons/mac/icon.icns",
+      "category": "public.app-category.medical",
+      "identity": "Mac Developer: Anirudh Kulkarni (PLYW34LDTW)",
+      "type": "development",
+      "provisioningProfile": "./RescribeEMRMacProdCertificate.provisionprofile"
+    },
+    "win": {
+      "icon": "./assets/icons/win/icon.ico"
+    }
+  }
+}
